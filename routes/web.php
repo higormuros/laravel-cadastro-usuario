@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Route::prefix("/app")->group(function(){
     Route::get("/listar-usuarios",[\App\Http\Controllers\ListarUsuarios::class,"listarUsuarios"])->name("sistema.listar");
-    Route::get("/ver-usuario",[\App\Http\Controllers\VerUsuario::class,"verUsuario"])->name("sistema.ver");
-    Route::post("/ver-usuario",[\App\Http\Controllers\VerUsuario::class,"verUsuario"])->name("sistema.ver");
+    Route::get("/ver-usuario/{id}",[\App\Http\Controllers\VerUsuario::class,"verUsuario"])->name("sistema.ver");
+    Route::post("/ver-usuario/{id}",[\App\Http\Controllers\VerUsuario::class,"verUsuario"])->name("sistema.ver");
     Route::get("/novo-usuario",[\App\Http\Controllers\NovoUsuario::class,"novoUsuario"])->name("sistema.novo");
     Route::post("/novo-usuario",[\App\Http\Controllers\NovoUsuario::class,"novoUsuario"])->name("sistema.novo");
 });

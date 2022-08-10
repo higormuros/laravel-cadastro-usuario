@@ -2,12 +2,13 @@
 @section("titulo","Ver Usuario")
 @section("conteudo")
 <div class="container py-5">
-    <form method="post" action="{{ route('sistema.ver') }}" class="border p-5">
+    <form method="post" action="" class="border p-5">
         @csrf
         <div class="mb-3">
             <label for="nome" class="form-label">Nome do Usuario</label>
-            <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nomeHelp">
+            <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nomeHelp" value="{{ $usuario->nome }}">
             <div id="nomeHelp" class="form-text">Por favor, digite o nome completo.</div>
+            <input type="hidden" name="id" class="form-control" value="{{ $usuario->id }}">
         </div>
         <div class="form-check">
             <input type="checkbox" name="produto1" class="form-check-input" id="produtoCheck1">

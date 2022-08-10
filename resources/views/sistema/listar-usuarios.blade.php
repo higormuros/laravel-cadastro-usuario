@@ -11,18 +11,12 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($usuarios as $usuario)
                 <tr>
-                    <td><a class="btn btn-outline-primary" href="">1234</a></td>
-                    <td class="align-middle">Higor Muros</td>
+                    <td><a class="btn btn-outline-primary" href="{{ route('sistema.ver',$usuario->id) }}">Editar {{ $usuario->id }}</a></td>
+                    <td class="align-middle">{{ $usuario-> nome }}</td>
                 </tr>
-                <tr>
-                    <td><a class="btn btn-outline-primary" href="">4321</a></td>
-                    <td class="align-middle">Hugo Muros</td>
-                </tr>
-                <tr>
-                    <td><a class="btn btn-outline-primary" href="">2345</a></td>
-                    <td class="align-middle">Hiago Muros</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

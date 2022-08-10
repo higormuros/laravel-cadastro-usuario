@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\usuario;
 
 class NovoUsuario extends Controller
 {
     public function novoUsuario(){
-        var_dump($_POST);
-        return view("sistema.novo-usuario");
+        return view("sistema.novo-usuario"); 
     }
 }

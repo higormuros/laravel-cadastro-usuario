@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\usuario;
 
 class ListarUsuarios extends Controller
 {
     public function listarUsuarios(){
-        return view("sistema.listar-usuarios");
+        $usuarios=usuario::all();
+        return view("sistema.listar-usuarios",["usuarios"=>$usuarios]);
     }
 }
